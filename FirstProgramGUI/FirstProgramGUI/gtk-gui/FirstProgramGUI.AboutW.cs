@@ -6,6 +6,10 @@ namespace FirstProgramGUI
 	{
 		private global::Gtk.Fixed fixed5;
 		
+		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		
+		private global::Gtk.TextView textview1;
+		
 		private global::Gtk.Button buttonCancel;
 
 		protected virtual void Build ()
@@ -22,15 +26,34 @@ namespace FirstProgramGUI
 			this.fixed5 = new global::Gtk.Fixed ();
 			this.fixed5.Name = "fixed5";
 			this.fixed5.HasWindow = false;
+			// Container child fixed5.Gtk.Fixed+FixedChild
+			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
+			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
+			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
+			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+			this.textview1 = new global::Gtk.TextView ();
+			this.textview1.Buffer.Text = "Primer programa con GUI\n\nDiana Alondra Toledo Maza 143355\nCarlos Alejandro Zenten" +
+			"o Robles 143382\nEdgardo Rito Deheza\nAndres\n\nDr. Juan Carlos Lopez Pimentel\nProgr" +
+			"amacion Visual\n\n9/27/2015";
+			this.textview1.WidthRequest = 362;
+			this.textview1.HeightRequest = 121;
+			this.textview1.CanFocus = true;
+			this.textview1.Name = "textview1";
+			this.textview1.Editable = false;
+			this.textview1.Justification = ((global::Gtk.Justification)(2));
+			this.GtkScrolledWindow.Add (this.textview1);
+			this.fixed5.Add (this.GtkScrolledWindow);
+			global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed5 [this.GtkScrolledWindow]));
+			w3.Y = 81;
 			w1.Add (this.fixed5);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(w1 [this.fixed5]));
-			w2.Position = 0;
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(w1 [this.fixed5]));
+			w4.Position = 0;
 			// Internal child FirstProgramGUI.AboutW.ActionArea
-			global::Gtk.HButtonBox w3 = this.ActionArea;
-			w3.Name = "dialog1_ActionArea";
-			w3.Spacing = 10;
-			w3.BorderWidth = ((uint)(5));
-			w3.LayoutStyle = ((global::Gtk.ButtonBoxStyle)(2));
+			global::Gtk.HButtonBox w5 = this.ActionArea;
+			w5.Name = "dialog1_ActionArea";
+			w5.Spacing = 10;
+			w5.BorderWidth = ((uint)(5));
+			w5.LayoutStyle = ((global::Gtk.ButtonBoxStyle)(2));
 			// Container child dialog1_ActionArea.Gtk.ButtonBox+ButtonBoxChild
 			this.buttonCancel = new global::Gtk.Button ();
 			this.buttonCancel.CanDefault = true;
@@ -40,15 +63,16 @@ namespace FirstProgramGUI
 			this.buttonCancel.UseUnderline = true;
 			this.buttonCancel.Label = "gtk-ok";
 			this.AddActionWidget (this.buttonCancel, -5);
-			global::Gtk.ButtonBox.ButtonBoxChild w4 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w3 [this.buttonCancel]));
-			w4.Expand = false;
-			w4.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w6 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w5 [this.buttonCancel]));
+			w6.Expand = false;
+			w6.Fill = false;
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 400;
+			this.DefaultWidth = 401;
 			this.DefaultHeight = 300;
 			this.Show ();
+			this.buttonCancel.Clicked += new global::System.EventHandler (this.OnOkClick);
 		}
 	}
 }

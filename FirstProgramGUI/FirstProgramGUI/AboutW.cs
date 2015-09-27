@@ -10,6 +10,12 @@ namespace FirstProgramGUI
 		{
 			this.Build ();
 		}
+
+		protected void OnOkClick (object sender, EventArgs e)
+		{
+			FirstProgramGUI.AboutW diagAbut = new FirstProgramGUI.AboutW ();
+			diagAbut.Hide ();
+		}
 	}
 }
 

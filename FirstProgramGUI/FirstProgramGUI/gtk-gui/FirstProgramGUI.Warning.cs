@@ -6,9 +6,9 @@ namespace FirstProgramGUI
 	{
 		private global::Gtk.Fixed fixed6;
 		
-		private global::Gtk.Button buttonCancel;
+		private global::Gtk.Label label1;
 		
-		private global::Gtk.Button buttonOk;
+		private global::Gtk.Button buttonCancel;
 
 		protected virtual void Build ()
 		{
@@ -24,15 +24,23 @@ namespace FirstProgramGUI
 			this.fixed6 = new global::Gtk.Fixed ();
 			this.fixed6.Name = "fixed6";
 			this.fixed6.HasWindow = false;
+			// Container child fixed6.Gtk.Fixed+FixedChild
+			this.label1 = new global::Gtk.Label ();
+			this.label1.Name = "label1";
+			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Imposible dividir sobre 0");
+			this.fixed6.Add (this.label1);
+			global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed6 [this.label1]));
+			w2.X = 124;
+			w2.Y = 21;
 			w1.Add (this.fixed6);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(w1 [this.fixed6]));
-			w2.Position = 0;
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(w1 [this.fixed6]));
+			w3.Position = 0;
 			// Internal child FirstProgramGUI.Warning.ActionArea
-			global::Gtk.HButtonBox w3 = this.ActionArea;
-			w3.Name = "dialog1_ActionArea";
-			w3.Spacing = 10;
-			w3.BorderWidth = ((uint)(5));
-			w3.LayoutStyle = ((global::Gtk.ButtonBoxStyle)(4));
+			global::Gtk.HButtonBox w4 = this.ActionArea;
+			w4.Name = "dialog1_ActionArea";
+			w4.Spacing = 10;
+			w4.BorderWidth = ((uint)(5));
+			w4.LayoutStyle = ((global::Gtk.ButtonBoxStyle)(2));
 			// Container child dialog1_ActionArea.Gtk.ButtonBox+ButtonBoxChild
 			this.buttonCancel = new global::Gtk.Button ();
 			this.buttonCancel.CanDefault = true;
@@ -40,29 +48,16 @@ namespace FirstProgramGUI
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.UseStock = true;
 			this.buttonCancel.UseUnderline = true;
-			this.buttonCancel.Label = "gtk-cancel";
-			this.AddActionWidget (this.buttonCancel, -6);
-			global::Gtk.ButtonBox.ButtonBoxChild w4 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w3 [this.buttonCancel]));
-			w4.Expand = false;
-			w4.Fill = false;
-			// Container child dialog1_ActionArea.Gtk.ButtonBox+ButtonBoxChild
-			this.buttonOk = new global::Gtk.Button ();
-			this.buttonOk.CanDefault = true;
-			this.buttonOk.CanFocus = true;
-			this.buttonOk.Name = "buttonOk";
-			this.buttonOk.UseStock = true;
-			this.buttonOk.UseUnderline = true;
-			this.buttonOk.Label = "gtk-ok";
-			this.AddActionWidget (this.buttonOk, -5);
-			global::Gtk.ButtonBox.ButtonBoxChild w5 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w3 [this.buttonOk]));
-			w5.Position = 1;
+			this.buttonCancel.Label = "gtk-dialog-warning";
+			this.AddActionWidget (this.buttonCancel, 0);
+			global::Gtk.ButtonBox.ButtonBoxChild w5 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w4 [this.buttonCancel]));
 			w5.Expand = false;
 			w5.Fill = false;
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
 			this.DefaultWidth = 400;
-			this.DefaultHeight = 300;
+			this.DefaultHeight = 146;
 			this.Show ();
 		}
 	}
