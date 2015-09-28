@@ -33,8 +33,8 @@ namespace FirstProgramGUI
 			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
 			this.textview1 = new global::Gtk.TextView ();
 			this.textview1.Buffer.Text = "Primer programa con GUI\n\nDiana Alondra Toledo Maza 143355\nCarlos Alejandro Zenten" +
-			"o Robles 143382\nEdgardo Rito Deheza\nAndres\n\nDr. Juan Carlos Lopez Pimentel\nProgr" +
-			"amacion Visual\n\n9/27/2015";
+			"o Robles 143382\nEdgardo Rito Deheza 143370\nAndres Aguilar Cruz 143385\n\nDr. Juan " +
+			"Carlos Lopez Pimentel\nProgramacion Visual\n\n9/27/2015";
 			this.textview1.WidthRequest = 362;
 			this.textview1.HeightRequest = 121;
 			this.textview1.CanFocus = true;
