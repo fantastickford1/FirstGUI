@@ -8,6 +8,11 @@ namespace FirstProgramGUI
 		{
 			this.Build ();
 		}
+
+		public Hola(){
+			int a;
+			a = 1;
+		}
 	}
 }
 
